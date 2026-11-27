@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sel-01",
+    "group": "selection",
+    "prompt": "帮我找 3 个宠物用品候选产品，给候选清单和利润空间分析",
+    "expect": { "intent": "selection", "minTools": 3, "toolNames": ["关键词搜索", "价格历史", "评论痛点聚类"], "artifactTypes": ["table"], "creditCostMin": 10 }
+  },
+  {
+    "id": "sel-02",
+    "group": "selection",
+    "prompt": "分析竞品价格和利润空间",
+    "expect": { "intent": "selection", "minTools": 2, "toolNames": ["关键词搜索"], "creditCostMin": 10 }
+  },
+  {
+    "id": "sel-03",
+    "group": "selection",
+    "prompt": "有什么长尾货源适合美国站小卖家",
+    "expect": { "intent": "selection", "minTools": 2, "artifactTypes": ["table"] }
+  },
+  {
+    "id": "mkt-01",
+    "group": "market",
+    "prompt": "宠物饮水机类目值得进入吗？市场容量多大",
+    "expect": { "intent": "market", "minTools": 3, "toolNames": ["谷歌趋势检索", "类目容量统计", "评论壁垒分析"], "artifactTypes": ["report"], "creditCostMin": 12 }
+  },
+  {
+    "id": "mkt-02",
+    "group": "market",
+    "prompt": "看一下这个类目的趋势和机会",
+    "expect": { "intent": "market", "minTools": 2, "artifactTypes": ["report"] }
+  },
+  {
+    "id": "lst-01",
+    "group": "listing",
+    "prompt": "优化这条 listing 的标题和五点描述",
+    "expect": { "intent": "listing", "minTools": 3, "toolNames": ["关键词匹配", "合规扫描"], "artifactTypes": ["report"], "creditCostMin": 6 }
+  },
+  {
+    "id": "lst-02",
+    "group": "listing",
+    "prompt": "写一版带卖点的 A+ 文案",
+    "expect": { "intent": "listing", "minTools": 2, "artifactTypes": ["report"] }
+  },
+  {
+    "id": "ads-01",
+    "group": "ads",
+    "prompt": "我的广告 ACOS 太高了，帮我找出该否的词",
+    "expect": { "intent": "ads", "minTools": 2, "toolNames": ["广告报表拉取", "低效词聚类"], "artifactTypes": ["table"] }
+  },
+  {
+    "id": "ads-02",
+    "group": "ads",
+    "prompt": "最近搜索词投放效果差，给一份否词清单",
+    "expect": { "intent": "ads", "minTools": 2, "artifactTypes": ["table"] }
+  },
+  {
+    "id": "str-01",
+    "group": "store",
+    "prompt": "店铺销量下滑了，帮我诊断一下原因",
+    "expect": { "intent": "store", "minTools": 3, "toolNames": ["销售数据拉取", "流量与转化拆解", "库存与评价扫描"], "artifactTypes": ["report"] }
+  },
+  {
+    "id": "str-02",
+    "group": "store",
+    "prompt": "出一份近 30 天的店铺经营日报和复盘",
+    "expect": { "intent": "store", "minTools": 2, "artifactTypes": ["report"] }
+  },
+  {
+    "id": "img-01",
+    "group": "image",
+    "prompt": "给这个商品换一个北欧家居场景的主图",
+    "expect": { "intent": "image", "minTools": 2, "toolNames": ["商品识别", "场景生成"], "artifactTypes": ["image"] }
+  },
+  {
+    "id": "img-02",
+    "group": "image",
+    "prompt": "做一套白底图 + 模特换装图",
+    "expect": { "intent": "image", "minTools": 1, "artifactTypes": ["image"] }
+  },
+  {
+    "id": "vid-01",
+    "group": "video",
+    "prompt": "生成一条 15 秒口播带货视频",
+    "expect": { "intent": "video", "minTools": 2, "toolNames": ["分镜脚本生成", "视频合成"], "artifactTypes": ["video"] }
+  },
+  {
+    "id": "vid-02",
+    "group": "video",
+    "prompt": "做一条图转视频的短片并配字幕",
+    "expect": { "intent": "video", "minTools": 1, "artifactTypes": ["video"] }
+  },
+  {
+    "id": "ord-video-over-image",
+    "group": "ordering",
+    "prompt": "做一张视频主图",
+    "expect": { "intent": "video", "minTools": 1, "artifactTypes": ["video"] }
+  },
+  {
+    "id": "ord-image-over-listing",
+    "group": "ordering",
+    "prompt": "生成图片文案描述里的场景图",
+    "expect": { "intent": "image", "minTools": 1, "artifactTypes": ["image"] }
+  },
+  {
+    "id": "ord-market-over-selection",
+    "group": "ordering",
+    "prompt": "找候选产品并分析市场机会",
+    "expect": { "intent": "market", "minTools": 2, "artifactTypes": ["report"] }
+  },
+  {
+    "id": "gen-01",
+    "group": "general",
+    "prompt": "你好，你能做什么",
+    "expect": { "intent": "general", "minTools": 1, "toolNames": ["知识检索"], "noArtifacts": true, "creditCostMin": 4 }
+  },
+  {
+    "id": "gen-02",
+    "group": "general",
+    "prompt": "今天天气怎么样",
+    "expect": { "intent": "general", "minTools": 1, "noArtifacts": true }
+  }
+]
